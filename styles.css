@@ -106,7 +106,7 @@ header {
     color: white;
     background-color: var(--cor2);
     border-radius: 10px;
-    transition: color 0.5s ease,background-color 0.5s ease, border-radius 0.5s ease;
+    transition: color 0.5s ease,background-color 0.5s ease, border-radius 0.8s ease;
 }
 
 #imagem-apresentaçao {
