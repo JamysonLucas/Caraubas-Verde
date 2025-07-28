@@ -52,7 +52,7 @@ nav > a:hover {
 }
 
 #linha {
-    background-color: var(--cor3);
-    height: 3px;
+    background-color: var(--cor2);
+    height: 4px;
     width: auto;
 }
