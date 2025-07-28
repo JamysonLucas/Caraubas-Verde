@@ -23,6 +23,14 @@ html {
     scroll-behavior: smooth;
 }
 
+h1, h2 {
+    font-family: var(--fontedestaque);
+}
+
+p {
+    font-family: var(--fontesans);
+}
+
 .menu {
     width: auto;
     height: auto;
@@ -49,10 +57,117 @@ nav > a:hover {
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
+    transition: color 0.5s ease,background-color 0.5s ease, border-radius 0.8s ease;
 }
 
 #linha {
-    background-color: var(--cor2);
+    background-color: var(--cor3);
     height: 4px;
     width: auto;
+}
+
+.apresentaçao {
+    width: 100%;
+    background-image: url(img/Planta.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.apresentaçao > h1 {
+    color: white;
+    font-size: 2.4em;
+    text-align: center;
+    font-family: var(--fontedestaque);
+}
+
+.apresentaçao > p {
+    color: var(--cor3);
+    font-size: 1.2em;
+    text-align: center;
+    font-family: var(--fontesans);
+}
+
+.sobre-nos {
+    display: flex;
+    margin: 60px auto 60px;
+    max-width: 1080px;
+}
+
+.texto-sobrenos {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.texto-sobrenos > h1 {
+    font-size: 1.6em;
+    color: var(--cor2);
+    font-family: var(--fontedestaque);
+    padding-bottom: 5px;
+}
+
+.texto-sobrenos > p {
+    font-family: var(--fontesans);
+}
+
+#imagem-sobrenos {
+    padding-left: 50px;
+    float: right;
+    align-items: right;
+}
+
+.container-explicaçao {
+    color: var(--cor3);
+    background-color: var(--cor4);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.container-explicaçao h1 {
+    font-size: 2.4em;
+}
+
+.container-explicaçao p {
+    font-size: 1em;
+    color: white;
+}
+
+.cards-explicaçao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-mudas {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.container-mudas h1 {
+    font-size: 2em;
+    color: black;
+}
+
+.container-mudas h2 {
+    padding-bottom: 8px;
+}
+
+.cards-mudas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.card {
+    width: 500px;
+    padding: 10px;
+    background-color: var(--cor4);
+    border-radius: 15px;
 }
