@@ -70,7 +70,8 @@ nav > a:hover {
     width: 100%;
     background-image: url(img/Planta.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center bottom;
+    background-attachment: fixed;
     background-size: cover;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -78,14 +79,14 @@ nav > a:hover {
 
 .apresentaçao > h1 {
     color: white;
-    font-size: 2.4em;
+    font-size: 6vb;
     text-align: center;
     font-family: var(--fontedestaque);
 }
 
 .apresentaçao > p {
     color: var(--cor3);
-    font-size: 1.2em;
+    font-size: 2.5vb;
     text-align: center;
     font-family: var(--fontesans);
 }
@@ -93,11 +94,13 @@ nav > a:hover {
 .sobre-nos {
     display: flex;
     margin: 60px auto 60px;
+    padding: 0px 30px 0px 30px;
     max-width: 1080px;
 }
 
 .texto-sobrenos {
-    margin-top: 40px;
+    padding-right: 30px;
+    margin-top: 20px;
     text-align: left;
 }
 
@@ -112,10 +115,23 @@ nav > a:hover {
     font-family: var(--fontesans);
 }
 
+#container-sobrenos {
+    display: block;
+    text-align: left;
+    margin-left: 0;
+    margin-right: auto;
+    line-height: 0;
+}
+
 #imagem-sobrenos {
-    padding-left: 50px;
-    float: right;
-    align-items: right;
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+}
+
+#imagem-sobrenos > img {
+    width: 100%;
+    height: auto;
 }
 
 .container-explicaçao {
