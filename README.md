@@ -1,4 +1,5 @@
-<img width="500" height="500" alt="Logo_simples_circular_esmaltaria_preto__4_-removebg-preview" src="https://github.com/user-attachments/assets/7b60bee5-adf7-41e1-a31e-392fbf1442f3" />
+<img width="1280" height="640" alt="Logo simples circular esmaltaria preto (5)" src="https://github.com/user-attachments/assets/5843b527-c28e-4501-b66f-e9104367ff8a" />
+
 
 # Caraúbas Verde: Transformando o amanhã!
 
