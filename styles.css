@@ -115,23 +115,10 @@ nav > a:hover {
     font-family: var(--fontesans);
 }
 
-#container-sobrenos {
-    display: block;
-    text-align: left;
-    margin-left: 0;
-    margin-right: auto;
-    line-height: 0;
-}
-
 #imagem-sobrenos {
-    display: inline-block;
-    position: relative;
-    max-width: 100%;
 }
 
-#imagem-sobrenos > img {
-    width: 100%;
-    height: auto;
+#imagem-sobrenos img {
 }
 
 .container-explicaçao {
