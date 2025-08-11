@@ -119,6 +119,8 @@ nav > a:hover {
 }
 
 #imagem-sobrenos img {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
 }
 
 .container-explicaçao {
@@ -166,6 +168,14 @@ nav > a:hover {
     justify-content: center;
     gap: 40px;
     padding-top: 30px;
+}
+
+.cards-mudas > .card {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.cards-mudas > .card:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.692);
 }
 
 .card {
