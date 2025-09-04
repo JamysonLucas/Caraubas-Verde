@@ -31,6 +31,16 @@ p {
     font-family: var(--fontesans);
 }
 
+@media (max-width: 768px) {
+  .sobre-nos {
+    flex-direction: column;
+  }
+
+  #imagem-sobrenos {
+    margin-top: 20px;
+  }
+}
+
 .menu {
     width: auto;
     height: auto;
@@ -115,9 +125,6 @@ nav > a:hover {
     font-family: var(--fontesans);
 }
 
-#imagem-sobrenos {
-}
-
 #imagem-sobrenos img {
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.295);
@@ -176,7 +183,7 @@ nav > a:hover {
 
 .cards-mudas > .card:hover {
     transform:translate(0px, -8px);
-    transition: transform 0.6s;
+    transition: transform ease 0.6s, transform;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.692);
 }
 
@@ -185,4 +192,41 @@ nav > a:hover {
     padding: 10px;
     background-color: var(--cor4);
     border-radius: 15px;
+}
+
+.forms {
+    background-color: var(--cor4);
+    margin-top: 20px;
+    padding: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forms-texto {
+    font-size: 1.2em;
+    color: white;
+}
+
+.forms > a {
+    background-color: var(--cor1);
+    color: white;
+    font-size: 1em;
+    font-family: var(--fontedestaque);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.forms > a::after .forms > a:hover {
+    transform:translate(0px, 0px);
+    transition: transform 0.6s;
+}
+
+.rodape {
+  background-color: white;
+  color: var(--cor1);
+  padding: 20px 10px;
+  font-family: var(--fontesans);
+  text-align: center;
 }
