@@ -6,7 +6,7 @@
 --cor1: #23AD2A;
 --cor2: #317A35;
 --cor3: #00E00B;
---cor4: #2B472C;
+--cor4: #17320b;
 --cor5: #293329;
 
 --fontedestaque: "raleway";
@@ -149,32 +149,38 @@ nav > a:hover {
 
 .cards-explicaçao {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
+    overflow-x: auto;
+    padding: 20px;
+    gap: 20px;
 }
 
-.container-mudas {
+#container-mudas {
     color: white;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 40px;
 }
 
-.container-mudas h2 {
+#container-mudas h2 {
     font-size: 2em;
     color: black;
 }
 
-.container-mudas h3 {
+#container-mudas h3 {
     padding-bottom: 8px;
 }
 
 .cards-mudas {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 40px;
     padding-top: 30px;
+    overflow: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .cards-mudas > .card {
@@ -194,12 +200,21 @@ nav > a:hover {
     border-radius: 15px;
 }
 
-.forms {
+#formulario {
     background-color: var(--cor4);
     margin-top: 20px;
     padding: 80px;
     display: flex;
     justify-content: space-evenly;
+    gap: 40px;
+}
+
+.forms-coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
 }
 
 .forms-texto {
@@ -207,20 +222,26 @@ nav > a:hover {
     color: white;
 }
 
-.forms > a {
+.forms-coluna > a {
     background-color: var(--cor1);
     color: white;
     font-size: 1em;
     font-family: var(--fontedestaque);
     font-weight: bold;
     text-decoration: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
 }
 
-.forms > a::after .forms > a:hover {
+.forms-coluna > a::after .forms-coluna > a:hover {
     transform:translate(0px, 0px);
     transition: transform 0.6s;
+}
+
+#linha-forms {
+    background-color: var(--cor3);
+    height: auto;
+    width: 4px;
 }
 
 .rodape {
