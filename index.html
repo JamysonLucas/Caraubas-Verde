@@ -15,17 +15,17 @@
                 <nav>
                     <a href="#sobre-nos" id="sobre-nos">Sobre nós</a>
                     <a href="#container-mudas" id="mudas">Nossas mudas</a>
-                    <a href="#formulario" id="forms">Quero receber minha muda</a>
+                    <a href="#formulario" id="forms">Solicitar Muda</a>
                 </nav>
             </div>
         </div>
         <div id="linha"></div>
-    </header>
-    <main>
         <section class="apresentaçao">
             <h1>Caraubas Verde: Transformando o amanhã.</h1>
             <p>Promovendo a sustentabilidade, saude e biodiversidade em Caraubas!</p>
         </section>
+    </header>
+    <main>
         <article>
             <div class="sobre-nos">
                 <div class="texto-sobrenos">
@@ -58,26 +58,22 @@
             <h2>Exemplos de Mudas que disponilizamos:</h2>
             <div class="cards-mudas">
                 <div class="card">
-                    <img src="img/iperoxo.png" alt="Ipe Roxo" width="150" height="150">
-                    <h3>Ipe Roxo</h3>
-                    <p>O ipê-roxo é uma árvore que floresce com cores vibrantes, trazendo beleza e vida ao ambiente. Além disso, suas raízes ajudam a proteger o solo da erosão e suas flores atraem polinizadores importantes, fortalecendo a biodiversidade local. Plantar ipê-roxo contribui para a recuperação ambiental e valoriza espaços verdes.</p>
-                </div>
-                <div class="card">
-                    <img src="img/ipeamarelo.png" alt="Ipe Amarelo" width="150" height="150">
-                    <h3>Ipe Amarelo</h3>
-                    <p>O ipê-amarelo se destaca por suas flores brilhantes que iluminam qualquer espaço. Essa árvore é resistente e ajuda a recuperar áreas degradadas, além de proteger o solo contra a erosão. Suas flores atraem abelhas e pássaros, promovendo a biodiversidade. Plantar ipê-amarelo é uma forma bonita e eficaz de cuidar do meio ambiente.</p>
-                </div>
-                <div class="card">
-                    <img src="img/catingueira.png" alt="Catingueira" width="150" height="150">
-                    <h3>Catingueira</h3>
-                    <p>A catingueira é uma árvore resistente à seca que ajuda a proteger o solo da erosão, recupera áreas degradadas e serve de alimento para animais na seca. Além disso, atrai polinizadores e fortalece a biodiversidade local. Plantar catingueira é importante para conservar a Caatinga, proteger a natureza e garantir um futuro mais sustentável.</p>
-                </div>
-                <div class="card">
                     <img src="img/Aceroleira.png" alt="Aceroleira" width="150" height="150">
                     <h3>Aceroleira</h3>
                     <p>A aceroleira é uma árvore frutífera resistente que produz frutos riquíssimos em vitamina C. Suas flores e frutos atraem pássaros e polinizadores, promovendo a biodiversidade local. Plantar uma aceroleira é uma forma simples e eficaz de garantir alimentos saudáveis e valorizar áreas verdes residenciais.</p>
                 </div>
+            <div class="card card-embreve">
+                <div class="status-crescimento">
+                    <span class="icone-semente">🌱</span>
+                    <div class="progresso-bar-container">
+                    <div class="progresso-fill" style="width: 25%;"></div>
+                    </div>
+                    <span class="porcentagem">25% de crescimento</span>
+                </div>
+                <h3>Novas Mudas em Breve</h3>
+                <p>Novas mudas estão a caminho! Estamos selecionando e preparando novas espécies para compartilhar com vocês. Em breve, nosso catálogo estará mais completo e pronto para receber novas sementes.</p>
             </div>
+        </div>
         </article>
         <article id="formulario">
             <div class="forms-coluna">
@@ -102,5 +98,38 @@
     <p>&copy; 2025 Caraúbas Verde 🌱 | Todos os direitos reservados</p>
    </div>
    </footer>
+    <script>
+        const slider = document.querySelector('.cards-mudas');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        if (slider) {
+            slider.addEventListener('mousedown', (event) => {
+                isDown = true;
+                slider.classList.add('dragging');
+                startX = event.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.classList.remove('dragging');
+            });
+
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.classList.remove('dragging');
+            });
+
+            slider.addEventListener('mousemove', (event) => {
+                if (!isDown) return;
+                event.preventDefault();
+                const x = event.pageX - slider.offsetLeft;
+                const walk = (x - startX) * 1.2;
+                slider.scrollLeft = scrollLeft - walk;
+            });
+        }
+    </script>
 </body>
 </html>

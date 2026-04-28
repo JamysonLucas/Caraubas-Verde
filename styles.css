@@ -31,16 +31,6 @@ p {
     font-family: var(--fontesans);
 }
 
-@media (max-width: 768px) {
-  .sobre-nos {
-    flex-direction: column;
-  }
-
-  #imagem-sobrenos {
-    margin-top: 20px;
-  }
-}
-
 .menu {
     width: auto;
     height: auto;
@@ -77,26 +67,30 @@ nav > a:hover {
 }
 
 .apresentaçao {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
     background-image: url(img/Planta.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-attachment: fixed;
     background-size: cover;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding: 200px;
 }
 
 .apresentaçao > h1 {
     color: white;
-    font-size: 6vb;
+    font-size: 3vw;
     text-align: center;
     font-family: var(--fontedestaque);
 }
 
 .apresentaçao > p {
     color: var(--cor3);
-    font-size: 2.5vb;
+    font-size: 1.5vw;
     text-align: center;
     font-family: var(--fontesans);
 }
@@ -175,16 +169,29 @@ nav > a:hover {
 .cards-mudas {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 40px;
     padding-top: 30px;
-    overflow: auto;
+    overflow-x: auto;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cards-mudas::-webkit-scrollbar {
+    display: none;
+}
+
+.cards-mudas.dragging {
+    cursor: grabbing;
 }
 
 .cards-mudas > .card {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
 }
 
 .cards-mudas > .card:hover {
@@ -198,6 +205,61 @@ nav > a:hover {
     padding: 10px;
     background-color: var(--cor4);
     border-radius: 15px;
+}
+
+/* Estilização do Card de Espera */
+.card-embreve {
+    border: 2px dashed var(--cor1); /* Borda tracejada para indicar algo incompleto */
+    background-color: #f9fdf5;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.status-crescimento {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icone-semente {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.progresso-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 10px;
+    width: 80%;
+    margin: 0 auto 5px;
+    overflow: hidden;
+}
+
+.progresso-fill {
+    background-color: var(--cor1); /* Verde do Caraúbas Verde */
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.porcentagem {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.card-embreve h3 {
+    color: #444;
+}
+
+.card-embreve p {
+    margin-top: 10px;
+    color: #888;
 }
 
 #formulario {
