@@ -6,6 +6,7 @@
     <title>Caraúbas Verde</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -27,7 +28,7 @@
     </header>
     <main>
         <article>
-            <div class="sobre-nos">
+            <div class="sobre-nos" id="sobre-nos">
                 <div class="texto-sobrenos">
                     <h2>Sobre o Caraúbas Verde</h2>
                     <p>O projeto Caraúbas Verde: Transformando o Amanhã trata do aumento das áreas verdes na cidade de Caraúbas por meio do plantio de árvores nativas e frutiferas. O objetivo principal é incentivar a comunidade a adotar práticas sustentáveis, como o cultivo de espécies locais, e conscientizar sobre a importância das árvores para o equilíbrio ecológico urbano.</p>
@@ -103,38 +104,5 @@
     <p>&copy; 2025 Caraúbas Verde 🌱 | Todos os direitos reservados</p>
    </div>
    </footer>
-    <script>
-        const slider = document.querySelector('.cards-mudas');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        if (slider) {
-            slider.addEventListener('mousedown', (event) => {
-                isDown = true;
-                slider.classList.add('dragging');
-                startX = event.pageX - slider.offsetLeft;
-                scrollLeft = slider.scrollLeft;
-            });
-
-            slider.addEventListener('mouseleave', () => {
-                isDown = false;
-                slider.classList.remove('dragging');
-            });
-
-            slider.addEventListener('mouseup', () => {
-                isDown = false;
-                slider.classList.remove('dragging');
-            });
-
-            slider.addEventListener('mousemove', (event) => {
-                if (!isDown) return;
-                event.preventDefault();
-                const x = event.pageX - slider.offsetLeft;
-                const walk = (x - startX) * 1.2;
-                slider.scrollLeft = scrollLeft - walk;
-            });
-        }
-    </script>
 </body>
 </html>

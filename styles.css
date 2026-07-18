@@ -31,6 +31,12 @@ p {
     font-family: var(--fontesans);
 }
 
+body {
+    .dark-theme {
+        background-color: var(--cor4);
+        color: white;
+    }
+}
 .menu {
     width: auto;
     height: auto;
