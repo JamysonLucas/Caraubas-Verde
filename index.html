@@ -12,10 +12,16 @@
     <header>
         <div class="menu">
         <div class="menu" id="logo"><a href="#"><img src="img/logocaraubasverde.png" alt="logo" width="125" height="125" id="foto-logo"></a></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="menu" id="nav">
                 <nav>
                     <a href="#sobre-nos" id="sobre-nos">Sobre nós</a>
                     <a href="#container-mudas" id="mudas">Nossas mudas</a>
+                    <a href="#impacto" id="impacto-nav">Nosso Impacto</a>
                     <a href="#formulario" id="forms">Solicitar Muda</a>
                 </nav>
             </div>
@@ -34,7 +40,7 @@
                     <p>O projeto Caraúbas Verde: Transformando o Amanhã trata do aumento das áreas verdes na cidade de Caraúbas por meio do plantio de árvores nativas e frutiferas. O objetivo principal é incentivar a comunidade a adotar práticas sustentáveis, como o cultivo de espécies locais, e conscientizar sobre a importância das árvores para o equilíbrio ecológico urbano.</p>
                 </div>
                 <div id="imagem-sobrenos">
-                    <img src="img/doaçao2.jpg" alt="Foto de entregar de muda" width="320px" height="200px">
+                    <img src="img/fotoprojeto.jpg" alt="Foto de entregar de muda" width="320px" height="200px">
                 </div>
             </div>
         </article>
@@ -81,6 +87,27 @@
             </div>
         </div>
         </article>
+        <section class="container-impacto" id="impacto">
+            <h2>Nosso impacto até agora</h2>
+            <p class="subtitulo-impacto">Cada muda entregue faz diferença. Veja os números:</p>
+            <div class="cards-impacto">
+                <div class="card-impacto">
+                    <span class="icone-impacto">🌳</span>
+                    <span class="valor-impacto" id="valor-arvores">0</span>
+                    <span class="label-impacto">Mudas entregues</span>
+                </div>
+                <div class="card-impacto">
+                    <span class="icone-impacto">🍃</span>
+                    <span class="valor-impacto" id="valor-carbono">0 kg</span>
+                    <span class="label-impacto">Carbono capturado/ano</span>
+                </div>
+                <div class="card-impacto">
+                    <span class="icone-impacto">🌡️</span>
+                    <span class="valor-impacto" id="valor-temperatura">0°C</span>
+                    <span class="label-impacto">Redução na temperatura</span>
+                </div>
+            </div>
+        </section>
         <article id="formulario">
             <div class="forms-coluna">
                 <div class="forms-texto">
