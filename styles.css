@@ -509,3 +509,144 @@ nav > a:hover {
   font-family: var(--fontesans);
   text-align: center;
 }
+
+/* ===== Página de Instruções (Como Plantar) ===== */
+
+.intro-instrucoes {
+    text-align: center;
+    padding: 60px 20px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro-instrucoes h1 {
+    font-size: 2.2em;
+    color: var(--cor2);
+}
+
+.intro-instrucoes p {
+    margin-top: 12px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.passos-plantio {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 40px 20px;
+}
+
+.passo-inverso {
+    flex-direction: row-reverse;
+}
+
+.passo:nth-child(even) {
+    background-color: #f6f8f5;
+    border-radius: 15px;
+}
+
+.passo-imagem {
+    flex: 1;
+}
+
+.passo-imagem img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.passo-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.passo-numero {
+    display: inline-block;
+    background-color: var(--cor1);
+    color: white;
+    font-family: var(--fontedestaque);
+    font-weight: bold;
+    font-size: 0.85em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.passo-texto h2 {
+    color: var(--cor2);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.passo-texto p {
+    color: #333;
+}
+
+.passo-dica {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid var(--cor1);
+    padding-left: 12px;
+}
+
+.cta-instrucoes {
+    text-align: center;
+    background-color: var(--cor4);
+    color: white;
+    padding: 50px 20px;
+    margin-top: 20px;
+}
+
+.cta-instrucoes p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-instrucoes a {
+    background-color: var(--cor1);
+    color: white;
+    font-family: var(--fontedestaque);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .passo,
+    .passo-inverso {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .passo-texto {
+        text-align: center;
+    }
+
+    .passo-dica {
+        border-left: none;
+        border-top: 3px solid var(--cor1);
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .passo-imagem img {
+        height: 200px;
+    }
+
+    .intro-instrucoes h1 {
+        font-size: 1.6em;
+    }
+}

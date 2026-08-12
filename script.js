@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Valores por árvore (conforme definido no projeto)
     const CARBONO_POR_ARVORE = 22;      // kg de carbono/ano por árvore
-    const TEMPERATURA_POR_ARVORE = 8;   // °C de impacto na temperatura por árvore
+    const SOMBRA_GERADA = 20;   // °C de impacto na temperatura por árvore
 
     const carbonoTotal = ARVORES_PLANTADAS * CARBONO_POR_ARVORE;
-    const temperaturaTotal = ARVORES_PLANTADAS * TEMPERATURA_POR_ARVORE * -1;
+    const sombraTotal = ARVORES_PLANTADAS * SOMBRA_GERADA;
 
     const elArvores = document.getElementById('valor-arvores');
     const elCarbono = document.getElementById('valor-carbono');
-    const elTemperatura = document.getElementById('valor-temperatura');
+    const elSombra = document.getElementById('valor-sombra');
 
     // Efeito de contagem crescente (do 0 até o valor final)
     function animarContagem(elemento, valorFinal, sufixo = '') {
@@ -56,6 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animarContagem(elArvores, ARVORES_PLANTADAS);
     animarContagem(elCarbono, carbonoTotal, ' kg');
-    animarContagem(elTemperatura, temperaturaTotal, '°C');
+    animarContagem(elSombra, sombraTotal, ' m²');
 
 });
